@@ -1,0 +1,35 @@
+<!--Menu-->
+<nav id="nav">
+    <div class="logo">
+        <a href="index.php?page=accueil">
+            <img src="img/logo.png" alt="">
+        </a>
+    </div>
+    <div class="openMenu"><i class="fa fa-bars"></i></div>
+    <ul class="mainMenu">
+        <li class="forward"><a href="index.php?page=accueil">Accueil</a></li>
+        <li class="forward"><a href="index.php?page=services">Nos services</a></li>
+        <li class="forward"><a href="index.php?page=contact">Contact</a></li>
+        <div class="closeMenu"><i class="fa fa-times"></i></div>
+    </ul>
+</nav>
+
+<script src="js/menu.js"></script>
+
+<script type="text/javascript">
+   
+    var  nav = document.getElementById('nav');
+  
+  window.onscroll = function(){
+
+      if (window.pageYOffset >300) {
+
+          nav.style.background = "#000";
+          nav.style.transition = "0.6s";
+      }
+      else{
+          nav.style.background = "rgba(0, 0, 0, 0.4)";
+      }
+  }
+
+</script>

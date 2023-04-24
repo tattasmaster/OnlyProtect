@@ -1,0 +1,109 @@
+<script src="https://unpkg.com/scrollreveal"></script>
+    <!--page nos services-->
+    <div class="page-services">
+        <!--partie bandeau accueil-->
+        <div class="bandeau-accueil">
+            <div class="bandeau-contenu">
+                <div class="bandeau-titre topscroll">
+                    <h1>Nos Services</h1>
+                    <p>Profitez d'une large gamme de produits, une technologie de pointe pour une sécurité et un confort maximal.
+                    </p>
+                </div>
+            </div>
+            <div class="bandeau-bouton">
+                <a href="#nos-services-accueil"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+        </div>
+        <!--partie alarme page nos services-->
+        <div class="alarmes" id="nos-services-accueil" id="alarmes">
+            <div class="alarmes-titre-texte">
+                <h1 class="topscroll">Alarmes</h1>
+                <p>Nos solutions de sécurité permettent d'intercepter toute intrusion
+                     dans vos locaux. <br>Ce dispositif avancé 
+                    permet la transmission des alarmes en moins de 0,3 secondes et fonctionne jusqu'à 35h après une panne.
+                </p>
+            </div>
+            <div class="alarmes-img">
+                <img class="alarmes-img1 topscroll" src="img/alarmes2.png" alt="">
+                <img class="alarmes-img2 downscroll" src="img/alarme1.png" alt="">
+            </div>
+            <div class="alarmes-texte">
+                <p>Notre solution sécurité, dont les éléments principaux permettent d'intercepter toute intrusion
+                    au sein de votre entreprise. La technologie embarquée dans les dispositifs de sécurité 
+                   permettent de transmettre les alarmes en 0,3 secondes et fonctionnent jusqu'à 35h après une panne.
+                </p>
+            </div>
+        </div>
+        <!--partie videosurveillance page nos services-->
+        <div class="videosurveillance" id="videosurveillance">
+            <div class="videosurveillance-titre-img">
+                <h1>Vidéosurveillance</h1>
+                <img src="img/videosurveillance1.png" alt="" class="downscroll">
+            </div>
+            <div class="videosurveillance-texte rightscroll">
+                <p>Only Protect vous propose une large gamme de caméras adaptées à tous types de lieux (intérieurs et/ou extérieurs). Connectées à son enregistreur et son disque dur, votre système vous permet un visionnage en temps réel 
+                   de vos locaux par le biais de l'application mobile ou de vos écrans, et un enregistrement disponible sur une période allant jusqu'à un mois.
+                </p>
+            </div>
+        </div>
+        <!--partie controle-acces page nos services-->
+        <div class="controle-acces" id="controle-acces">
+            <div class="controle-acces-titre-img">
+                <h1 class="topscroll">Contrôle d'accès</h1>
+                <img src="img/clavierns.png" alt="">
+                <p class="downscroll">Le contrôle d'accès permet de limiter et sécuriser l'accès extérieur et/ou intérieur dans les lieux souhaités.
+                </p>
+            </div>
+        </div>
+        <!--partie domotique page nos services-->
+        <div class="domotique" id="domotique">
+            <div class="domotique-titre">
+                <h1>Domotique</h1>
+                <p class="leftscroll">Automatisez votre entreprise grâce à la domotique.</p>
+            </div>
+            <div class="domotique-contenus">
+                <div class="domotique-contenu topscroll lumiere">
+                        <img src="img/ampoule.png" alt="" width="200px">
+                        <p>Contrôlez vos lumières et leur intensité.</p>
+                </div>
+                <div class="domotique-contenu downscroll serrure">
+                        <img src="img/serrure.png" alt="">
+                        <p>Gardez le contrôle sur toutes vos serrures.</p>
+                </div>
+                <div class="domotique-contenu topscroll">
+                        <img src="img/fenetre.png" alt="">
+                        <p>Programmez l'ouverture et la fermeture de vos rideaux</p>
+                </div>
+                <div class="domotique-contenu downscroll">
+                        <img src="img/temp.png" alt="">
+                        <p>Contrôlez intelligemement la température de vos locaux.</p>
+                </div>
+            </div>
+            <div class="domotique-texte">
+                <p>Une gestion plus large, pour un contrôle plus rentable.<br>
+                    Cette technologie vous permet une gestion de vos climatiseurs, 
+                    lumières, ballon d’eau chaude etc...<br> 
+                    Des économies peuvent être réalisées jusqu'à -30% sur vos 
+                    mensualités pour vos dépenses énergétiques.<br>Une première étude 
+                    de faisabilité est obligatoire pour votre projet.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        ScrollReveal().reveal('.topscroll', { delay: 500,
+                                            distance: "50px",
+                                            duration: 800,
+                                            origin: 'top'});
+        ScrollReveal().reveal('.downscroll', { delay: 500,
+                                            distance: "50px",
+                                            duration: 800});
+        ScrollReveal().reveal('.rightscroll', { delay: 500,
+                                            distance: "50px",
+                                            duration: 800,
+                                            origin: 'right'});
+        ScrollReveal().reveal('.leftscroll', { delay: 500,
+                                            distance: "50px",
+                                            duration: 800,
+                                            origin: 'left'});
+    </script>

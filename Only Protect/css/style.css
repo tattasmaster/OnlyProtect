@@ -1,0 +1,856 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: #9E9E9E;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Menu */
+
+nav {
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+  
+nav .mainMenu {
+    display: flex;
+    padding-right: 1.2em;
+}
+
+nav .mainMenu li {
+    padding: 15px;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 0.3em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.2s ease;
+    color: #c4c4c4;
+}
+
+nav .mainMenu li a:hover {
+    color: white;
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu, .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo img {
+    width: 95px;
+    margin: 5px;
+    cursor: pointer;
+    padding-left: 1.2em;
+}
+
+.mainMenu li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0%;
+    background: white;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.mainMenu li.forward a:before{
+    width: 60%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.mainMenu li.forward a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* page accueil */
+
+/* bandeau */
+
+.bandeau-accueil {
+    height: 750px;
+    width: 100%;
+    background-image: url(bandeau.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bandeau-titre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bandeau-titre h1 {
+    color: #000000;
+    text-align: center;
+    padding: 1em 2em;
+}
+
+.bandeau-titre p {
+    padding: 1em;
+    text-align: center;
+    color: #000000;
+}
+
+.bandeau-bouton {
+    display: flex;
+    justify-content: center;
+}
+
+.bandeau-bouton i {
+    color: #000000;
+    font-size: 1.5em;
+}
+
+/* partie nos services accueil */
+
+.nos-services-accueil {
+    background-color: #242323;
+    padding-bottom: 2em;
+}
+
+.nos-services-accueil-titre {
+    text-align: center;
+    padding: 2em;
+}
+
+.nos-services-accueil-titre p {
+    padding-top: 1em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+  .container .box {
+    position: relative;
+    width: 350px;
+    height: 220px;
+    transition: 0.4s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    margin: 2em;
+    
+  }
+  
+  .container .box:hover {
+    transform: rotateY(0deg) scale(1.15);
+    z-index: 1;
+  }
+  .container .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container .box:hover .imgBx:before {
+    opacity: 1;
+    
+  }
+  .container .box .imgBx img {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+  
+  .container .box .content p {
+    color: #fff;
+    transition: 0.4s;
+    font-size: 14px;
+    transform: translateY(200px);
+    transition-delay: 0.4s;
+  }
+  
+  .container .box:hover .content p {
+    transform: translateY(0px);
+  }
+
+/* partie entreprise accueil */
+
+.entreprise-accueil {
+    background-color: #212121;
+    padding: 3em;
+}
+
+.entreprise-accueil-contenu {
+    display: flex;
+    flex-direction: row;
+}
+
+.entreprise-accueil-titre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.entreprise-accueil-titre-img img {
+    align-items: center;
+    width: 90%;
+    padding: 1em;
+}
+
+.entreprise-accueil-texte {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.entreprise-accueil-texte p {
+    margin-top: 2em;
+}
+
+/* partie contact accueil */
+
+.contact-accueil {
+    background-image: url(backgroundcontact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-accueil-titre {
+    padding: 2em;
+}
+
+.contact-accueil-titre h1 {
+    color: #000000;
+}
+
+.contact-accueil-texte p {
+    color: #000000;
+}
+
+.contact-accueil-bouton a {
+    color: #000000;
+    font-weight: 600;
+}
+
+.contact-accueil-bouton {
+    margin-top: 2em;
+    padding: 0.8em;
+    background-color: rgb(219, 219, 219);
+    border: 1px solid black;
+}
+
+.contact-accueil-bouton:hover {
+    background-color: #ffffff;
+}
+
+/* page services */
+
+/* partie alarmes */
+
+.alarmes {
+    background-color: #1f1f1f;
+    padding: 4em;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.alarmes-titre-texte {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: left;
+}
+
+.alarmes-titre-texte p {
+    text-align: left;
+}
+
+.alarmes-titre-texte h1 {
+    padding-bottom: 1em;
+}
+
+.alarmes-texte {
+    display: none;
+}
+
+.alarmes-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.alarmes-img img {
+    width: 70%;
+}
+
+.alarmes-img1 {
+    margin-left: 60px;
+    margin-bottom: -62.5px;
+}
+
+.alarmes-img2 {
+    margin-right: 130px;
+    margin-top: -62.5px;
+}
+
+/* partie videosurveillance */
+
+.videosurveillance {
+    background-color: #252525;
+    padding: 4em;
+    display: flex;
+    flex-direction: row;
+}
+
+.videosurveillance-titre-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.videosurveillance-titre-img img {
+    align-items: center;
+    width: 90%;
+    padding: 1em;
+}
+
+.videosurveillance-texte {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* partie controle acces */
+
+.controle-acces {
+    background-color: #212121;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.controle-acces-titre-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.controle-acces-titre-img img {
+    align-items: center;
+    width: 80%;
+    padding: 1em;
+}
+
+.controle-acces-titre-img p {
+    width: 70%;
+    text-align: center;
+}
+
+/* partie domotique */
+
+.domotique {
+    background-color: #252525;
+    padding-bottom: 4em;
+}
+
+.domotique-titre {
+    text-align: center;
+    padding: 2em;
+}
+
+.domotique-titre p {
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.domotique-contenus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.domotique-contenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.domotique-contenu img {
+    width: 25%;
+}
+
+.domotique-contenu p {
+    padding: 1em;
+}
+
+.lumiere p {
+    padding-top: 1em;
+}
+
+.domotique-texte {
+    width: 100%;
+    text-align: center;
+}
+
+/* Contact */
+
+.page-contact {
+    background-color: #212121;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3em 0;
+}
+
+.section-un-contact {
+    margin-left: 4em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titre-contact {
+    font-size: 2.8em;
+    letter-spacing: 5px;
+    padding: 1em;
+}
+
+.info-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 3em 0 ;
+}
+
+.section-form-contact {
+    width: 35%;
+    margin: 7em 0;
+}
+
+input:focus {
+    outline: none !important;                                                                                                                                                                                                                                                                                                                                                                                                                                    
+}
+
+.form-contact label {
+    display: block;
+}
+
+.input-form {
+    background-color: transparent;
+    width: 100%;
+    padding: 0.5em 0.6em;
+    border: none;
+    border-bottom: 1px solid #9E9E9E;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9E9E9E;
+    margin: 0;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0.5em 0.6em;
+}
+
+textarea:focus {
+    outline: none !important;  
+}
+
+.boutonForm{
+    padding: 0.5em 1.2em;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.boutonForm:hover {
+    color: black;
+    background-color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+/* Mentions légales */
+
+.mentions-legales {
+    background-color: #333333;
+    height: 760px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.mentions-legales-texte {
+    padding-left: 20px;
+}
+
+.mentions-legales-texte h1 {
+    padding-bottom: 20px;
+    font-size: xx-large;
+}
+
+.mentions-legales-texte p, .sep1, .sep2, .sep3 {
+    line-height: 1.5;
+    font-size: large;
+}
+
+.sep1, .sep2 {
+    padding-bottom: 1em;
+}
+
+/* Politique de confidentialité */
+
+.pol-confidentialite {
+    background-color: #333333;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 5em 0;
+}
+
+.pol-confidentialite-texte {
+    padding-left: 20px;
+    width: 70%;
+}
+
+.pol-confidentialite-texte h1 {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: xx-large;
+    color: white;
+}
+
+.pol-confidentialite-texte {
+    line-height: 1.5;
+}
+
+.article {
+    color: white;
+}
+
+/* footer */
+
+.footer {
+    padding: 3em 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+} 
+
+.logo-footer {
+    width: 70px;
+}
+
+.lien-mentions-legales {
+    margin: 1em;
+}
+
+.lien-mentions-legales a:hover {
+    color: white;
+}	
+
+/* Page Alarmes */
+
+.page-alarmes-partie1 {
+    background-color: #212121;
+    padding: 3em;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 150px;
+}
+
+.page-alarmes-partie1-img-titre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-alarmes-partie1-img-titre img {
+    align-items: center;
+    width: 50%;
+    padding: 1em;
+}
+
+.page-alarmes-partie1-texte {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-alarmes-partie2 {
+    background-color: #252525;
+    padding: 3em;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.page-alarmes-partie2-img-titre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 250px;
+}
+
+.page-alarmes-partie2-img-titre img {
+    align-items: center;
+    width: 90%;
+    padding: 1em;
+}
+
+.page-alarmes-partie2-img-titre h1 {
+    text-align: center;
+}
+
+.page-alarmes-partie2-texte {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 150px;
+}
+
+.page-alarmes-partie3 {
+    background-color: #212121;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-alarmes-partie3-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-alarmes-partie3-content img {
+    align-items: center;
+    width: 50%;
+    padding: 2em;
+}
+
+.page-alarmes-partie3-content p {
+    width: 70%;
+    text-align: center;
+}
+
+/* Page Vidéosurveillance */
+
+.page-vidéosurveillance-partie1 {
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-vidéosurveillance-partie1-content {
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-vidéosurveillance-partie1-content h1 {
+    padding-top: 1em;
+}
+
+.page-vidéosurveillance-partie1-content img {
+    padding-top: 2em;
+    align-items: center;
+    width: 45%;
+    padding: 3em;
+}
+
+.page-vidéosurveillance-partie1-content p {
+    padding-top: 1em;
+    width: 70%;
+    text-align: center;
+}
+
+.page-vidéosurveillance-partie2 {
+    background-color: #252525;
+    padding-bottom: 4em;
+}
+
+.page-vidéosurveillance-partie2-titre {
+    text-align: center;
+    padding: 2em;
+}
+
+.page-vidéosurveillance-partie2-contenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.caméra-icônes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.vidéosurveillance-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.vidéosurveillance-content img {
+    width: 65%;
+}
+
+.vidéosurveillance-content p {
+    padding: 1em;
+}
+
+.page-vidéosurveillance-partie3 {
+    background-color: #1f1f1f;
+    padding: 4em;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.page-vidéosurveillance-partie3-contenu {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-vidéosurveillance-partie3-titre-texte {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+.page-vidéosurveillance-partie3-titre-texte h1 {
+    padding-bottom: 1em;
+}
+
+.page-vidéosurveillance-partie3-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
